@@ -24,7 +24,7 @@ def nettoyer_texte(texte):
     """Nettoie le texte brut de Wikipédia."""
     # Supprime les balises de type <ref>...</ref>
     texte = re.sub(r'<ref[^>]*>.*?</ref>', '', texte, flags=re.DOTALL)
-    texte = re.sub(r'<[^>]+>', '', texte) # Supprime les autres balises HTML
+    texte = re.sub(r'<[^>]+>', ' ', texte) # Supprime les autres balises HTML
     texte = re.sub(r'\s+', ' ', texte) # Remplace les espaces multiples
     return texte.strip()
 
