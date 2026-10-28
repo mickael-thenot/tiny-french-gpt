@@ -17,7 +17,12 @@ MOTS_CLES_SCIENCES = [
     "physicien",
     "chimiste",
     "mathématicien",
-    "biologie"
+    "biologie",
+    "chimie",
+    "mécanique",
+    "astronomie",
+    "neurosciences",
+    "génétique"
 ]
 
 def nettoyer_texte(texte):
@@ -38,7 +43,7 @@ def main():
     dataset = load_dataset("wikimedia/wikipedia","20231101.fr", split="train", streaming=True)
 
     compteur = 0
-    max_articles = 100 # On limite à 100 articles pour ce premier test
+    max_articles = 100
 
     print(f"Extraction des articles scientifiques (max {max_articles})...")
 
