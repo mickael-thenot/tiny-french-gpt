@@ -3,7 +3,7 @@ from dataclasses import dataclass
 @dataclass
 class ModelConfig:
     # --- Taille du modèle ---
-    vocab_size: int = 12000             # Taille du vocabulaire (doit correspondre au tokenizer)
+    vocab_size: int = 12003             # 12000 tokens de base + 3 spéciaux
     d_model: int = 384                  # Dimension d'embedding (la "largeur" du modèle)
     n_layers: int = 8                   # Nombre de blocs Transformer (la "profondeur")
     n_heads: int = 6                    # Nombre de têtes d'attention
